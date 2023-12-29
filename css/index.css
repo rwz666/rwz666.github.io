@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #333;
+}
+
+/* 倒计时 */
+.time {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  font-size: 2.3rem;
+  color: #fff;
+}
+
+.time span {
+  line-height: 40px;
+  text-align: center;
+}
+
+.time-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  /* font-size: 2rem; */
+}
+
+.time-box p {
+  font-size: 1rem;
+}
+
+/* 按钮 */
+.btn {
+  position: relative;
+  top: 200px;
+  /* 根据需要修改向下定位的距离 */
+  cursor: pointer;
+}
