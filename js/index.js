@@ -117,4 +117,5 @@ document.querySelector('.btn').addEventListener('click', function () {
   } else {
     console.log('哈哈哈哈元旦快乐');
   }
+  location.href = './yh/index.html';
 })

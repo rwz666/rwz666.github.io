@@ -1,6 +1,6 @@
 .box {
   position: relative;
-  left: 50px;
+  left: 70px;
   height: 200px;
   transform-style: preserve-3d;
   animation: animate 16s linear infinite;
