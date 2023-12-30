@@ -51,7 +51,7 @@
   <div id="yhBtn"
     style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff ; font-size:20px    ">
     <p>💥点击我 (没反应请等待几秒再试)💥</p>
-    <img style="width:64px;margin-bottom:36px " src="files/boom.png">
+    <img style="width:300px;margin-top:36px " src="files/boom.jpg">
   </div>
 
   <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
@@ -83,17 +83,22 @@
       </symbol>
     </svg>
   </div>
+
+  <!-- 右下角小图标 -->
   <!-- <div class="div_btn" id='div_wph'
-    style="bottom: 70px; right: 35px;position: fixed; cursor: pointer; width: 42px; height: 42px; border: 2px solid #fff; border-radius: 50%; font-size: 1em; line-height: 40px; text-align: center; z-index: 999; overflow: hidden;"> -->
-  <!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=184773349&site=qq&menu=yes">
-      <img border="0" src="http://q2.qlogo.cn/headimg_dl?dst_uin=184773349&spec=100" alt="点击这⾥给我发消息" title="点击这⾥给我发消息"
-        width="45px" height="45px" />
-    </a> -->
+    style="bottom: 70px; right: 35px;position: fixed; cursor: pointer; width: 42px; height: 42px; border: 2px solid #fff; border-radius: 50%; font-size: 1em; line-height: 40px; text-align: center; z-index: 999; overflow: hidden;">
+    <a target="_blank" href="#">
+      <input type="text">
+      <img class="myimg" src="./files/bbt.ico" width="45px" height="45px" />
+    </a>
 
-  <!-- <a href="http://yan6818.gitee.io/jianli/"   target="_blank"><img src="http://q2.qlogo.cn/headimg_dl?dst_uin=184773349&spec=100"  width="45px" height="45px"/></a> -->
+  </div> -->
+  <div class="link">
+    <input type="text" name="text" class="input my_input" placeholder="Your Name here...">
+    <button class="my_btn">
+      Yes
+    </button>
   </div>
-
-
 
   <!-- 引用NianBroken的FireworkSimulator，仅为引用，非恶意搬运，侵删 -->
   <div class="container">
@@ -102,7 +107,7 @@
       <div class="loading-init__status"></div>
     </div>
     <div class="stage-container remove">
-      <div class="page_two hide">
+      <div class="page_two hide my_text">
         <div id="text" style="display:none;">岁未将至 平安喜乐 愿亲在 2024万事如意🧨
           <br>唯愿烟花像星辰 祝你所愿皆成真🧨
           <br>
@@ -111,6 +116,9 @@
         <div class="type_words" id="contents" style="font-size:1.05rem;line-height:1.5rem;"></div>
       </div>
       <div class="canvas-container">
+        <!-- 自己写的canvas，实现文字效果 -->
+        <canvas id="my-canvas"></canvas>
+
         <canvas id="trails-canvas"></canvas>
         <canvas id="main-canvas"></canvas>
       </div>
@@ -177,10 +185,10 @@
 
 
   <!-- partial -->
-  <script src="files/js/fscreen@1.0.1.js"></script><!--!‬‏‬‫‭‫‫‬‫‭‫‬‬‏‭‭‪‏‬‎‫‬‎‎-->
-  <script src="files/js/Stage@0.1.4.js"></script><!--!‬‏‬‫‭‫‫‬‫‭‫‬‬‏‭‭‪‏‬‎‫‬‎‎-->
-  <script src="files/js/MyMath.js"></script><!--!‬‏‬‫‭‫‫‬‫‭‫‬‬‏‭‭‪‏‬‎‫‬‎‎-->
-  <script src="files/js/script.js"></script><!--!‬‏‬‫‭‫‫‬‫‭‫‬‬‏‭‭‪‏‬‎‫‬‎‎-->
+  <script src="files/js/fscreen@1.0.1.js"></script>
+  <script src="files/js/Stage@0.1.4.js"></script>
+  <script src="files/js/MyMath.js"></script>
+  <script src="files/js/script.js"></script>
 
   <script>
     function musicPlay(isPlay) {
@@ -202,7 +210,7 @@
     $('#yhBtn').click(e => {
       $('#yhBtn').hide()
       setTimeout(() => {
-        start()
+        // start()
         fireworks();
       }, 1600) // 
       setTimeout(() => {
@@ -273,15 +281,22 @@
       var diff2Minutes = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours) / minutes)
       var diff2Seconds = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours - diff2Minutes *
         minutes) / seconds)
-      if (todayMonth == 1) { if (todayDate == 1) { document.getElementById("text1").innerHTML = "现在是1月1日,祝你" + todayYear + "新年快乐！" } }
-      else { document.getElementById("text1").innerHTML = "提前祝你" + newYear + "新年快乐" }
+      if (todayMonth == 1) {
+        if (todayDate == 1) {
+          // document.getElementById("text1").innerHTML = "现在是1月1日,祝你" + todayYear + "新年快乐！";
+        }
+      }
+      else {
+        // document.getElementById("text1").innerHTML = "提前祝你" + newYear + "新年快乐";
+      }
       // document.getElementById("time").innerHTML =  diffDays + "天" + diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒"+newYear +'author:小颜'
     }
     time()
+
   </script>
 
 
-
+  <script src="./files/js/myclick.js"></script>
 </body>
 
 </html>
