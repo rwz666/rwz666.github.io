@@ -43,8 +43,13 @@ document.querySelector('.box').addEventListener('click', function () {
   console.log('点了也没有效果哦')
 })
 document.querySelector('.btn').addEventListener('click', function () {
+  // 获取当前年份
+  let currentYear = new Date().getFullYear();
+
+  // 创建一个 Date 对象，表示新年
+  let newYearDate = new Date(currentYear + 1, 0, 1);
   let nowTime = +new Date();
-  if (inputTime - nowTime > 0) {
+  if (newYearDate - nowTime > 0) {
     console.log('还没到时间哦');
   } else {
     console.log('哈哈哈哈元旦快乐');
