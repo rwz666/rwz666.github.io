@@ -64,7 +64,7 @@ function myRender() {
   <br>
   <br>
   `
-  if (name === "王雪莹") {
+  if (name === "") {
     let lvstr1 = `
     能收下吗？
     <br>
